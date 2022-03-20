@@ -1,0 +1,37 @@
+.catalog__item {
+  display: flex;
+  height: 150px;
+}
+
+.catalog__item-img {
+  width: 30%;
+}
+
+@media screen and (max-width: 525px) {
+  .catalog__item-img {
+    width: 20%;
+  }
+
+  .catalog__item-content {
+    width: 80%;
+  }
+}
+
+.catalog__item-img img {
+  width: 60px;
+}
+
+.catalog__item-content {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.link__hover {
+  transition: 0.2s;
+}
+
+.link__hover:hover {
+  color: rgb(255, 134, 104) !important;
+}

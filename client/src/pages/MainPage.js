@@ -139,7 +139,12 @@ const MainPage = () => {
       <AutoCarousel
         slides={carousel.length && carousel.filter((i) => i.slidenum === "1")}
       />
-      <h4 style={{ color: "grey", fontWeight: "500" }}>Новые товары</h4>
+      <h4
+        className="product__headers"
+        style={{ color: "grey", fontWeight: "500" }}
+      >
+        Новые товары
+      </h4>
 
       <Slick
         data={products && products}
@@ -151,7 +156,10 @@ const MainPage = () => {
         slides={carousel.length && carousel.filter((i) => i.slidenum === "2")}
       />
 
-      <h4 style={{ color: "grey", fontWeight: "500" }}>
+      <h4
+        className="product__headers"
+        style={{ color: "grey", fontWeight: "500" }}
+      >
         Самые посещаемые товары
       </h4>
       <Slick
@@ -160,7 +168,12 @@ const MainPage = () => {
         numSlide={4}
       />
       <div className="brands">
-        <h4 style={{ color: "grey", fontWeight: "500" }}>Популярные бренды</h4>
+        <h4
+          className="product__headers"
+          style={{ color: "grey", fontWeight: "500" }}
+        >
+          Популярные бренды
+        </h4>
         <div className="brand">
           {brands &&
             brands.map((brand) => (
@@ -181,7 +194,12 @@ const MainPage = () => {
       </div>
 
       <div>
-        <h4 style={{ color: "grey", fontWeight: "500" }}>Наши сотрудники</h4>
+        <h4
+          className="product__headers"
+          style={{ color: "grey", fontWeight: "500" }}
+        >
+          Наши сотрудники
+        </h4>
         <div className="brand">
           {companies &&
             companies.map((company) => (

@@ -118,6 +118,10 @@
   .responsive {
     height: 100px !important;
   }
+
+  .product__headers {
+    font-size: 24px;
+  }
 }
 
 @media screen and (max-width: 425px) {

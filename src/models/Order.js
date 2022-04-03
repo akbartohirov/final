@@ -7,6 +7,7 @@ const CartSchema = new mongoose.Schema(
     stir: { type: String },
     entityName: { type: String },
     phone: { type: String },
+    username: { type: String },
     city: { type: String, required: true },
     street: { type: String, required: true },
     typeSending: { type: String },

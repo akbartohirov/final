@@ -66,7 +66,7 @@ const AdminBrandsPage = () => {
     <div className="adminPage">
       <div id="modal1" className="modal modal-fixed-footer">
         <div className="modal-content">
-          <h4>Cоздать Бренд</h4>
+          <h4>Cоздать Слайд</h4>
           <form
             className="col m6 offset-m3"
             style={{ padding: "0 2rem" }}

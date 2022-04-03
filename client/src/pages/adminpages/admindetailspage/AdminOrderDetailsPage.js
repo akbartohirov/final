@@ -52,7 +52,7 @@ const AdminOrderDetailsPage = () => {
       <AdminSidebar />
       <div className="adminUsersDetailsPage">
         <div className="row">
-          <div className="col s12 m8">
+          <div className="col s12 m6">
             <h4>{`Заказ с ID ${order._id}`}</h4>
             <span style={{ fontWeight: "600" }}> Данные заказчика</span>
             <hr />
@@ -123,7 +123,25 @@ const AdminOrderDetailsPage = () => {
               </option>
             </select>
           </div>
-          <div className="col s12 m4">xayr</div>
+          <div className="col s12 m6">
+            <h4>Заказанные товары</h4>
+            {order.products &&
+              order.products.map((item, index) => (
+                <div className="ordered__products" key={index}>
+                  <div className="ordered__product--img">
+                    <img src={`/${item.img[0].path}`} alt="product img" />
+                  </div>
+                  <div className="ordered__product--name">{item.title}</div>
+                  <div className="ordered__product--quantity">
+                    {item.quantity}. штук
+                  </div>
+                  <div className="ordered__product--price">
+                    {new Intl.NumberFormat().format(item.price * item.quantity)}{" "}
+                    сум
+                  </div>
+                </div>
+              ))}
+          </div>
         </div>
       </div>
     </div>

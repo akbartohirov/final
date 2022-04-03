@@ -25,16 +25,6 @@ const AdminOrdersPage = () => {
       <div className="adminOrdersPage">
         <div className="adminOrdersPageHeader">
           <p className="adminOrdersPageTitle">Все принятые заказы</p>
-          <button
-            data-target="modal1"
-            className="btn modal-trigger right-align"
-            onClick={(e) => {
-              const elem = document.querySelectorAll(".modal");
-              window.M.Modal.init(elem);
-            }}
-          >
-            Создать продукт
-          </button>
         </div>
 
         <table className="striped">
@@ -42,7 +32,7 @@ const AdminOrdersPage = () => {
             <tr>
               <th>№</th>
               <th>ID заказчика</th>
-              <th>Телю номер</th>
+              <th>Тел. номер</th>
               <th>Тип отправки</th>
               <th>Дата заказа</th>
               <th></th>
@@ -57,7 +47,7 @@ const AdminOrdersPage = () => {
                   <th>{index + 1}</th>
                   <th>
                     <Link
-                      className="black-text"
+                      className="black-text user"
                       to={`/admin/users/${order.userId}`}
                     >
                       {order.userId}

@@ -22,3 +22,11 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+.card-cont {
+  transition: 0.3s all;
+}
+
+.card-cont:hover {
+  transform: scale(1.03);
+}

@@ -54,12 +54,9 @@ const Basket = () => {
 
   //delete order function
   const deleteHandler = (e, id) => {
-    console.log(id);
     let basket = JSON.parse(localStorage.getItem("salamBasket"));
-    console.log(basket);
     if (basket) {
       const filter = basket.filter((item) => item.productId !== id);
-      console.log(filter);
 
       localStorage.setItem("salamBasket", JSON.stringify(filter));
       setOrders(filter);

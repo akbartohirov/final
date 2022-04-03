@@ -2,3 +2,36 @@
   flex: 5;
   padding: 15px 20px;
 }
+
+.ordered__products {
+  width: 100%;
+  height: 120px;
+  background-color: red;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #eee;
+  align-items: center;
+  font-size: 16px;
+}
+
+.ordered__product--img img {
+  height: 100px;
+}
+.ordered__product--img {
+  margin-right: 15px;
+  flex-grow: 1;
+}
+
+.ordered__product--name {
+  flex-grow: 4;
+}
+.ordered__product--quantity {
+  flex-grow: 1;
+}
+
+.ordered__product--price {
+  flex-grow: 1;
+}

@@ -47,8 +47,8 @@ const Footer = () => {
                   className="indigo-text text-danken-5"
                   href="tel:998933936703"
                 >
-                  <i class="fas fa-phone"></i> Позвоните нам: +998 (93) 393 67
-                  03
+                  <i className="fas fa-phone"></i> Позвоните нам: +998 (93) 393
+                  67 03
                 </a>
               </li>
               <li>
@@ -56,7 +56,8 @@ const Footer = () => {
                   className="indigo-text text-danken-5"
                   href="mailto:salam@marlet.com"
                 >
-                  <i class="fas fa-envelope"></i> Напишите нам: salam@market.com
+                  <i className="fas fa-envelope"></i> Напишите нам:
+                  salam@market.com
                 </a>
               </li>
             </ul>

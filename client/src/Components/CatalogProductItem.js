@@ -50,43 +50,53 @@ const CatalogProductItem = ({ data, ownstyle }) => {
   return (
     <div style={ownstyle && ownstyle}>
       <div className="card card-cont">
-        <div
-          className="card-image"
-          style={{ height: "180px", overflow: "hidden", position: "relative" }}
-        >
-          <img
+        <Link to={`/product/${data._id}`}>
+          <div
+            className="card-image"
             style={{
-              height: "100%",
-              width: "auto",
-              padding: "20px",
-              marginTop: "20px",
+              height: "180px",
+              overflow: "hidden",
+              position: "relative",
             }}
-            src={`/${data.img[0].path}`}
-            alt="product img"
-          />
-        </div>
-        <div className="card-content">
-          <Link
-            to={`/product/${data._id}`}
-            className="card-title prodcuct-card-title "
-            style={{ cursor: "pointer", color: "#000" }}
           >
-            {data.title}
-          </Link>
-          <p
-            style={{ textAlign: "right", fontWeight: "600", fontSize: "20px" }}
-          >
-            {formatter.format(data.sellPrice)} сум
-          </p>
-        </div>
-        <div className="card-action">
-          <button
-            className="btn waves-effect"
-            onClick={(e) => basketHandler(e)}
-          >
-            В корзину
-          </button>
-        </div>
+            <img
+              style={{
+                height: "100%",
+                width: "auto",
+                padding: "20px",
+                marginTop: "20px",
+              }}
+              src={`/${data.img[0].path}`}
+              alt="product img"
+            />
+          </div>
+          <div className="card-content">
+            <span
+              className="card-title prodcuct-card-title "
+              style={{ cursor: "pointer", color: "#000" }}
+            >
+              {data.title}
+            </span>
+            <p
+              style={{
+                textAlign: "right",
+                fontWeight: "600",
+                fontSize: "20px",
+                color: "#000",
+              }}
+            >
+              {formatter.format(data.sellPrice)} сум
+            </p>
+          </div>
+          <div className="card-action">
+            <button
+              className="btn waves-effect"
+              onClick={(e) => basketHandler(e)}
+            >
+              В корзину
+            </button>
+          </div>
+        </Link>
       </div>
     </div>
   );

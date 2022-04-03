@@ -76,20 +76,20 @@ const Product = () => {
           >
             В корзину
           </span>
+          <div className="product-description">
+            <h5>Характеристики товара</h5>
+            <table className="striped">
+              <tbody style={{ fontSize: "12px" }}>
+                {product &&
+                  product.description.split(",").map((desc, index) => (
+                    <tr key={index}>
+                      <td>{desc}</td>
+                    </tr>
+                  ))}
+              </tbody>
+            </table>
+          </div>
         </div>
-      </div>
-      <div className="row product-description">
-        <h4>Характеристики товара</h4>
-        <table className="striped">
-          <tbody>
-            {product &&
-              product.description.split(",").map((desc, index) => (
-                <tr key={index}>
-                  <td>{desc}</td>
-                </tr>
-              ))}
-          </tbody>
-        </table>
       </div>
     </div>
   );
